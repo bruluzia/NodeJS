@@ -9,13 +9,13 @@ Essa aplicação simula um blog
 
 
 ## Como Executar 
-1- Clone o repositório para sua máquina
-2- Acesse o caminho do mesmo através do terminal 
-3- Baixe e instale MYSQL Workbench, crie um schema chamado 'blogBD'
-4- Execute o comando 'npm install express'
-5- Execute o comando 'node index.js' no seu terminal 
-6- Acesse localhost:8080
-7- Acesse http://localhost:8080/admin/users/create para criar um usuário e utilizar as demais funções da aplicação (CRUDS de Categories/Articles/Courses/References)
+- Clone o repositório para sua máquina
+- Acesse o caminho do mesmo através do terminal 
+- Baixe e instale MYSQL Workbench, crie um schema chamado 'blogBD'
+- Execute o comando 'npm install express'
+- Execute o comando 'node index.js' no seu terminal 
+- Acesse localhost:8080
+- Acesse http://localhost:8080/admin/users/create para criar um usuário e utilizar as demais funções da aplicação (CRUDS de Categories/Articles/Courses/References)
 
 
 ## Notas
