@@ -1,5 +1,9 @@
 # Blog 
 Essa aplicação simula um blog
+Foi feita por:
+- Bianca
+- Bruna Luzia Almeida Rodrigues
+- Robson Pimenta Moura Junior 
 
 ## Tecnologias utlizadas
 - Mysql
