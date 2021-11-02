@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/homenavbar.ejs') %>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome!</h1>
+            <p class="lead">This a simple blog.</p>
+            <hr class="my-4">
+            <p>I'm doing this project to learn NodeJS, and to practice using bootstrap, HTML and CSS.</p>
+            <br>
+        </div>
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= article.title %></h2>
+                </div>  
+                <div class="card-body">
+                    <a href="/<%= article.slug %>" class="btn btn-primary">Read article</a>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+        <div class="row">
+            <div class="col col-12"> 
+                <a style="float: right;" href="/articles/page/2">Next</a>   
+            </div>
+        </div>
+        <br> <br> 
+</body>
+
+<%- include('partials/footer.ejs') %>

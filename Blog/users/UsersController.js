@@ -13,6 +13,32 @@ router.get("/admin/users/create", (req, res) => {
     res.render("admin/users/create", {alert: false})
 })
 
+router.get("/login", (req, res) => {
+    res.render("admin/users/login")
+}) 
+
+router.post("/authenticate", (req, res) => {
+    var email = req.body.email
+    var password = req.body.password
+
+    User.findOne({where:{email: email}}).then(user => {
+        if(user != undefined){
+            var correct = bcrypt.compareSync(password, user.password)
+            if(correct){
+                req.session.user = {
+                    id: user.id,
+                    email: user.emal
+                }
+                res.redirect("/admin/articles") //para testar
+            } else {
+                res.redirect("login")
+            }
+        } else {
+            res.redirect("/login")
+        }
+    })
+})
+
 router.post("/users/create", (req, res) => {
     var email = req.body.email
     var password = req.body.password    
@@ -35,11 +61,11 @@ router.post("/users/create", (req, res) => {
             res.render("admin/users/create", {alert: true})
         }
     })
+})
 
-    router.get("/login", (req, res) => {
-        res.render("admin/users/login")
-    })
-
+router.get("/logout", (req, res) => {
+    req.session.user = undefined
+    res.redirect("/")
 })
 
 module.exports = router

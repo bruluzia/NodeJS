@@ -1,0 +1,25 @@
+<%- include('../../partials/header.ejs')%>
+<%- include('../../partials/navbar.ejs')%>
+
+<div class="container">
+    <hr>
+    <div class="card">
+        <div class="card-header">
+            <h2>Edit Reference</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/references/update">
+                <input type="hidden" value="<%= reference.id %>" name="id">
+                <input class="form-control" type="text" name="title" placeholder="Set the reference title" value="<%= reference.title %>">
+                <br>
+                <input class="form-control" type="text" name="author" placeholder="Set the reference author" value="<%= reference.author %>">               
+                <br>
+                <input class="form-control" type="text" name="link" placeholder="Set the reference link" value="<%= reference.link %>">
+                <br>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ('../../partials/footer.ejs')%>

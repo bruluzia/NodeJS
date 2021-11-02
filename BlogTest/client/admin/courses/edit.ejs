@@ -1,0 +1,35 @@
+<%- include('../../partials/header.ejs')%>
+<%- include('../../partials/navbar.ejs')%>
+
+<div class="container">
+    <hr>
+    <div class="card">
+        <div class="card-header">
+            <h2>Edit course</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/courses/update">
+                <input type="hidden" value="<%= course.id %>" name="id">
+                <input class="form-control" type="text" name="title" placeholder="Set the course title" value="<%= course.title %>">
+                <br>
+                <textarea class="form-control" placeholder="Type your course here" name="body" id="course"><%- course.body %></textarea>
+                <br>
+                <input class="form-control" type="text" name="author" placeholder="Set the course author" value="<%= course.author %>">               
+                <br>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ('../../partials/footer.ejs')%>
+<script src="/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: "#course",
+        plugins: [
+            'advlist autolink link image lists print preview hr searchreplace wordcount',
+            ' fullscreen insertdatetime media save table paste emoticons'
+        ]
+    })
+</script>
