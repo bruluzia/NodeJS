@@ -25,3 +25,6 @@ Foi feita por:
 ## Notas
 Aplicação consiste em 5 CRUDS completos, com interface gráfica
 Utilizamos o padrão REST, e conseguimmos colocar a aplicação no Docker, porém não conseguimos fazer o mesmo com o Banco de Dados, por isso, no passo a passo de como executar inclui a instalação do MYSQL Worckbench e a criação do schema blogBD
+
+## Documentos
+Os artefatos de documentos estão localizados na pasta Artefatos 
