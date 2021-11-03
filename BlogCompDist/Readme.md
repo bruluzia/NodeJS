@@ -30,6 +30,7 @@ Utilizamos o padrão REST, e conseguimmos colocar a aplicação no Docker, poré
 Os artefatos do projeto estão localizados na pasta Artefatos:
 - Diagrama de Caso de Uso
 - Diagrama E-R
+- Diagrama de Classes
 - Diagrama de Pacotes
 - Documento de Requisitos
 - Relatório de Conceitos
